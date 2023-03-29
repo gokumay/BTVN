@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+	<head> memo: chứa những thông tin mô tả của sp
+		<title>Tiêu đề</title>
+		<meta charset="utf-8" />  memo: cho phép hiển thị ND mà ko bị lỗi font"
+	</head>
+	<body>
+		nội dung hiển thị của website
+	</body>
+	
+</html>

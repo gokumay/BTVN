@@ -1,0 +1,45 @@
+*{
+    box-sizing: border-box;
+}
+.wrap1 {
+    width: 1000px;
+    height: 1000px;
+    border: 1px solid #000;
+}
+.wrap {
+    width: 800px;
+    height: 800px;
+    border: 1px solid #000;
+    position: relative;
+}
+.wrap div {
+    width: 100px;
+    height: 100px;
+}
+.div1 {
+    background-color: rgb(233, 92, 209);
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+.div2 {
+    background-color: rgb(110, 184, 64);
+    position: relative;
+    top: 30px;
+    left: 50px;
+    z-index: 1;
+}
+.div3 {
+    background-color: rgb(78, 122, 203);
+    position: absolute;
+    right: 0px;
+    top: 0px;
+}
+.div4 {
+    background-color: rgb(230, 134, 62);
+    position: sticky;
+    top: 10px;
+}
+.wrap {
+    position: static;
+}

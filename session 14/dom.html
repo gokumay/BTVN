@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="title">JS</h1>
+    <h1 class="txt">GetBtTagName</h1>
+    <div id="list" style="border: 2px solid #000;">
+
+    </div>
+    <input id="pass" type="password">
+    <script>
+        // tìm các phần tử html
+        var h1 = document.getElementById("title");
+        var byTagName = document.getElementsByTagName('h1');
+        var byClassName = document.getElementsByClassName('txt');
+        var querySelector = document.querySelector('#title');
+        var querySelectorAll = document.querySelectorAll('#title');
+        h1.innerText = "JS DOM";
+        console.log(h1);
+        console.log(h1.id);
+        console.log(byClassName);
+        console.log(byTagName);
+        console.log(querySelector);
+        console.log(querySelectorAll);
+
+        //thay đổi thuộc tính, truy xuất thông tin
+        var text = "Danh sach text";
+        var _list = document.getElementById('list');
+        _list.innerHTML = `
+            <ul>
+                <li>${text}</li>
+                <li>list2</li>
+                <li>list3</li>
+            </ul>
+        `;
+        _list.style.borderColor = 'red';
+        _list.style.borderWidth = '10px';
+        console.log(_list.style.borderStyle);
+        console.log(_list.style.borderColor);
+
+        var pass = document.getElementById('pass');
+        pass.setAttribute('type', 'text');
+
+        // theem, xoa ptu html
+        var btn = document.createAttribute('button');
+        btn.id = "btn";
+        btn.innerText = "Click me";
+        _list.appendChild(btn);
+        // _list.removeChild(btn);
+        _list.replaceChild
+    </script>
+</body>
+</html>

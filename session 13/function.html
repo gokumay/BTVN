@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function hello() {
+            console.log("Hello")
+        }
+        hello();
+
+        var fnc_expression = function() {
+            console.log("Ex")
+        }
+        fnc_expression();
+
+        (function(param) {
+            console.log("IIFE " + param);
+        })("doi so")
+
+        var arrow_func = () =>console.log("arrow function");
+        arrow_func();
+
+        // chuyen tham tri
+        var increNumber = (num) => {
+            num +=10;
+            console.log(num);
+        }
+        var a = 5;
+        increNumber(a);
+        console.log("Sau khi ham thuc thi a = " + a);
+
+        // chuyen tham chieu
+        var passReferenceFunc = (arr) => {
+            arr[0] += 10;
+            console.log(arr[0]);
+        }
+        var numbers = [];
+        numbers[0] = 16;
+        passReferenceFunc(numbers);
+        console.log("Sau khi ham thuc thi numbers[0] = " + numbers[0]);
+
+
+        var checkNumbers = function(number, callbackFnc) {
+            callbackFnc(numbers);
+        }
+        function funcArg1(number) {
+            if (number % 2 == 0)
+                console.log(number + " la so chan");
+            else
+                console.log(number + " la so le");
+        }
+        function funcArg2(number) {
+            if (number > 0)
+                console.log(number + " la so duong");
+            else
+                console.log(number + " la so a,");
+        }
+        checkNumbers(5, funcArg1);
+        checkNumbers(5, funcArg2);
+
+        // sort array khi dung call back function
+        var sortArrayNumber = function(arr, callbackFnc) {
+            for (let i = 0; i < arr.length; i++) {
+                for (let j = i + 1; j < arr.length; i++) {
+                    if (callbackFnc(arr[i], arr[j])) {
+                        let temp = arr[i];
+                        arr[i] = arr[j];
+                        arr[j] = temp;
+                    }
+                }
+            }
+        }
+
+        var newNumbers = [1,4,7,2,8,29,16];
+        sortArrayNumber(newNumbers, (n1, n2) => n1 > n2);
+        console.log(newNumbers);
+
+        // DN ham tim kiem trong mang bat ky theo dieu kien bat ky
+        //1
+        var searchArray = function(arr, callbackFnc) {
+            for (let item of arr) {
+                if (callbackFnc(item)) {
+                    result.push(item);
+                }
+            }
+        }
+        
+
+        //2
+
+        //3 . Change array
+
+
+
+    </script>
+</body>
+</html>

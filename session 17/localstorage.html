@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var user = {
+            userName: "admin",
+            password: "12as",
+        };
+        // lưu đối tượng vào local storage
+        localStorage.setItem('user', JSON.stringify(user));
+        // Lấy dữ liệu
+        var data = localStorage.getItem('user');
+        var data = JSON.parse(localStorage.getItem('user'));
+
+        console.log(data.userName);
+
+        //xoa du lieu da luu trong local storage
+        //localStorage.removeItem('user');
+    </script>
+</body>
+</html>

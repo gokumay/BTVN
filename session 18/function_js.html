@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        tr.active td {
+            background-color: aqua;
+
+        }
+    </style>
+</head>
+<body>
+    <table border="1" width="100%">
+        <tr>
+            <th>
+
+            </th>
+        </tr>
+    </table>
+    <script src="jquery.js"></script>
+    <script>
+        $('td').click(function() {
+            $(this).parent().addClass('active');
+            //tim nhieu cha
+            //$(this).parents('the cha muon tim');
+            // tim con
+            //$(this).find('the con');
+
+            // remove class cua nhung cai con lai cung cap
+            $(this).parent().sibLings().removeClass('active');
+        })
+    </script>
+</body>
+</html>

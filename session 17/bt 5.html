@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        5. Tạo đối tượng máy tính gồm 3 phương thức
+        a. Read(): nhận hai giá trị và lưu chúng dưới dạng thuộc tính đối tượng
+        b. Sum(): trả về tổng giá trị đã lưu
+        c. Mul(): trả về tích các giá trị đã lưu
+        */
+        class Caculator {
+            read(a,b) {
+                this.a = a;
+                this.b = b;
+            }
+            sum() {
+                return this.a + this.b;
+            }
+            mul() {
+                return this.a * this.b;
+            }
+        }
+        var cal = new Caculator();
+        cal.read(34,2);
+        console.log('Tong 2 so la: ' + cal.sum());
+        console.log('Tich 2 so la: ' + cal.mul());
+    </script>
+</body>
+</html>

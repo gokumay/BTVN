@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // định nghĩa lớp học
+        function SinhVien(id, name, email) {
+            // định nghĩa các thuộc tính
+            this.id = id;
+            this.name = name;
+            this.email = email;
+            // định nghĩa các hành vi
+            this.xinChao = function() {
+                console.log(`Xin chao! Tooi teen laf ${this.name}`);
+            }
+        }
+        //bổ sung phương thức cho class đã định nghĩa
+        SinhVien.prototype.display = function() {
+            console.log(this.id);
+            console.log(this.name);
+            console.log(this.email);
+        }
+
+        // khởi tạo đối tượng
+        var sv = new SinhVien('SV01', 'Ngoc', 'ngoc@gamil.com');
+        var sv2 = new SinhVien('SV02', 'Ngoc', 'ngoc@gamil.com');
+        sv.id = 'sv03'; //gán giá trị cho thuộc tính của đối tượng
+        console.log(sv.id); // lấy giá trị trong thuộc tính của đối tượng
+
+        // gọi các phương thức của đối tượng
+        sv.xinChao();
+        sv2.xinChao();
+
+        var subject = {
+            id: 'HCJ',
+            name: 'Thiet ke giao dien web',
+            show: function() {
+                console.log(this.name);
+            }
+        };
+
+        console.log(subject.name);
+        subject.show();
+
+        var obj = new subject();
+
+        ojb.title = 'Tai lieu huong dan HTML';
+        obj.price = 45000;
+
+        obj.show = function() {
+            console.log(this.title);
+        }
+        obj.show();
+
+
+        // Cách khác để định nghĩa function
+        class Person {
+            constructor(id,name,phone) {
+                this.id = id;
+                this.name = name;
+                this.phone = phone;
+            }
+            // phuowng thuc
+            display() {
+                console.log(this.id);
+                console.log(this.name);
+                console.log(this.phone);
+            }
+        }
+
+        var p = new Person('P001', 'Thanh', '2347872');
+        p.display();
+
+    </script>
+</body>
+</html>

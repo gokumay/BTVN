@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 6. Xây dựng đối tượng book gồm các thuộc tính và phương thức sau:
+        a. bookId: mã sách
+        b. bookName: tên sách
+        c. price: giá sách
+        d. author: Các tác giả sách
+        e. bookStatus: trạng thái sách
+        f. inputData: cho phép nhập thông tin sách
+        g. displayData: cho phép hiển thị các thông tin sách
+        */
+
+        class Book {
+            constructor(bookId='',bookName='',price=0.0,author='',bookStatus=true) {
+                this.bookId = bookId;
+                this.bookName = bookName;
+                this.price = price;
+                this.author = author;
+                this.bookStatus = bookStatus;
+            }
+            
+
+            display() {
+                console.log(this.bookId);
+                console.log(this.bookName);
+                console.log(this.price);
+                console.log(this.author);
+                console.log(this.bookStatus);
+            }
+            inputData() {
+                this.bookId = prompt('Nhap ma sach');
+                this.bookName = prompt('Nhap ten sach');
+                this.price = prompt('Nhap gia sach');
+                this.author = prompt('Nhap ten tac gia');
+                this.bookStatus = prompt('Nhap trang thai hien tai');
+            }
+            displayData() {
+                console.log(`
+                    Ma sach: ${this.bookId}
+                    Ten sach: ${this.bookName}
+                    Gia: ${this.price}
+                    Tac gia: ${this.author}
+                    Trang thai: ${this.bookStatus}
+                `);
+            }
+        }
+        var book = new Book();
+        book.inputData();
+        book.displayData();
+    </script>
+</body>
+</html>

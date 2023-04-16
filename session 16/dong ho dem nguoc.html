@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let target = new Date('2023/04/11');
+        let now = new Date();
+        let seconds = (target.getTime() - now.getTime()) /1000;
+
+        let h = parseInt(seconds / 3600);
+        let m = parseInt((seconds % 3600) / 60);
+        let sec = parseInt((seconds % 60));
+
+        console.log(h + ":" + m + ":" + sec);
+    </script>
+</body>
+</html>

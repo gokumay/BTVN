@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<div>
+    <h2>Bay h la</h2>
+    <div id="show_time"></div>
+    <audio id="music" src="chen link bai nhac" >
+    </audio>
+</div>
+
+    </audio>
+    <script>
+        //lay thoi gian thuc
+        let show = document.getElementById('show_time');
+        let music = document.getElementById('music');
+        music.play();
+
+        // hien thi dong ho
+        let showTime = setInterval(function() {
+            let now = new Date();
+            show.innerHTML = now.getHours() + ":" + now.getMinutes() + ":" + now.getSeconds;          
+        }, 1000);
+
+        // play music
+        let playMusic = setInterval(function() {
+            music.play();
+            // chuyen bai hat, doc duong dan nhac tu listMusic
+            // chay bai hat
+        }, 5 * 60 * 1000)
+
+        // doi anh nen
+        // document.getElementById('').style.backgroundImage = 'url()';
+
+        
+    </script>
+</body>
+</html>

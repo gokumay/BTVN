@@ -1,0 +1,28 @@
+*{box-sizing: border-box;}
+.content {
+    border: 1px solid #000;
+    margin-bottom: 20px;
+}
+/* .b1 {height: 50px;}
+.b2 {height: 100px;}
+.b3 {height: 150px;}
+.b4 {height: 200px;}
+.b5 {height: 250px;}
+.b6 {height: 300px;}
+.b7 {height: 350px;} */
+.row {
+    border: 1px solid red;
+    /* height: 1000px; */
+    display: flex; /* các phần tử con của nó đều trở thành flex item => các phần tử mặc định chiều cao bằng nhau*/
+    flex-wrap: wrap;
+    justify-content: space-around;
+    /* align-content: space-around; */
+    /* align-items: baseline; */
+    /* flex-direction: row-reverse; */
+    /* align-content: stretch; */
+}
+.col {
+    width: 33.33333%;
+    background-color: #d0d0d0;
+    border: 1px solid #fff;
+}

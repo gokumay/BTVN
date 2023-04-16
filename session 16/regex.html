@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //khai bao chuoi quy tac
+        let _regex = /[A-Z]/;
+        // +: 1..n
+        // *: 0..n
+        // ?: 0..1
+        let regex1 = /A+/;
+        let legRegẽ = /^[A-Z]{6,8}$/;
+        // su dung
+        // kiem tra chuoi dau vao co phu hop voi quy tac hay ko => tra ve true/false
+        console.log(_regex.test(`123345`));
+        // lay gia tri phu hop voi quy tac dua ra => object
+        console.log(_regex.exec(`1D1333aAsdfB4`));
+    </script>
+</body>
+</html>
